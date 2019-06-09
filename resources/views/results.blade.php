@@ -77,7 +77,7 @@
 
                         <div class="body-nest" id="basic" style="margin-top: 30px;">
                             <div class="form_center">
-                                <h2>Олимпийский 2 </h2>
+                                <h2>{{ $house->street }} {{ $house->num_house }}</h2>
                                 <img src="assets/img/mic1map.jpg" alt="">
                                 <br>
                                 <br>
@@ -106,10 +106,21 @@
                                     <div class="col-md-12">
                                         <h4>Вы можете рассчитывать на заслуженно высокий балл благоустроенности:</h4>
                                         <div class="div">
-                                            <img src="assets/img/baby-carriage.svg" alt="мамочки" width="30px">
-                                            <img src="assets/img/disabled.svg" alt="инвалиды" width="30px">
-                                            <img src="assets/img/trophy.svg" alt="спортсмены" width="30px">
-                                            <img src="assets/img/bus.svg" alt="транспорт" width="30px">
+
+                                                @foreach ($achivments as $achiv)
+                                                @if ($achiv->pic == 1)
+                                                    <img src="assets/img/baby-carriage.svg" alt="мамочки" width="30px">
+                                                @endif
+                                                @if ($achiv->pic == 2)
+                                                    <img src="assets/img/disabled.svg" alt="инвалиды" width="30px">
+                                                @endif
+                                                @if ($achiv->pic == 3)
+                                                    <img src="assets/img/trophy.svg" alt="спортсмены" width="30px">
+                                                @endif
+                                                @if ($achiv->pic == 4)
+                                                    <img src="assets/img/bus.svg" alt="транспорт" width="30px">
+                                                @endif
+                                                @endforeach
                                         </div>
                                     </div>
                                 </div>
@@ -117,21 +128,21 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <h4>Общий рейтинг:</h4>
-                                        <h3>7/10 </h3>
-                                        <div class="full" style="display: inline-block">
-                                            <img src="assets/img/tree_full.png" alt="" width="50px">
-                                            <img src="assets/img/tree_full.png" alt="" width="50px">
-                                            <img src="assets/img/tree_full.png" alt="" width="50px">
-                                            <img src="assets/img/tree_full.png" alt="" width="50px">
-                                            <img src="assets/img/tree_full.png" alt="" width="50px">
-                                            <img src="assets/img/tree_full.png" alt="" width="50px">
-                                            <img src="assets/img/tree_full.png" alt="" width="50px">
-                                        </div>
-                                        <div class="empty" style="display: inline-block">
-                                            <img src="assets/img/tree_empty.jpg" alt="" width="70px">
-                                            <img src="assets/img/tree_empty.jpg" alt="" width="70px">
-                                            <img src="assets/img/tree_empty.jpg" alt="" width="70px">
-                                        </div>
+                                        <h3 style="font-size: 50px">{{$reiting}}/10 </h3>
+                                        {{--<div class="full" style="display: inline-block">--}}
+                                            {{--<img src="assets/img/tree_full.png" alt="" width="50px">--}}
+                                            {{--<img src="assets/img/tree_full.png" alt="" width="50px">--}}
+                                            {{--<img src="assets/img/tree_full.png" alt="" width="50px">--}}
+                                            {{--<img src="assets/img/tree_full.png" alt="" width="50px">--}}
+                                            {{--<img src="assets/img/tree_full.png" alt="" width="50px">--}}
+                                            {{--<img src="assets/img/tree_full.png" alt="" width="50px">--}}
+                                            {{--<img src="assets/img/tree_full.png" alt="" width="50px">--}}
+                                        {{--</div>--}}
+                                        {{--<div class="empty" style="display: inline-block">--}}
+                                            {{--<img src="assets/img/tree_empty.jpg" alt="" width="70px">--}}
+                                            {{--<img src="assets/img/tree_empty.jpg" alt="" width="70px">--}}
+                                            {{--<img src="assets/img/tree_empty.jpg" alt="" width="70px">--}}
+                                        {{--</div>--}}
                                     </div>
                                 </div>
 
