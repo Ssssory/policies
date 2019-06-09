@@ -78,14 +78,12 @@
 
                         <div class="body-nest" id="basic" style="margin-top: 300px;">
                             <div class="form_center">
-                                <form role="form">
+                                <form role="form" method="get" action="/results">
+                                    {{ csrf_field() }}
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Укажите адрес дома</label>
-                                        <input type="street" placeholder="Воронеж Шишкова 125" id="street" class="form-control">
+                                        <input type="text" placeholder="Воронеж Шишкова 125" name="street" id="street" class="form-control">
                                     </div>
-
-
-
                                     <button class="btn btn-info" type="submit" style="margin-left: 45%">Каково здесь?</button>
                                 </form>
                             </div>
