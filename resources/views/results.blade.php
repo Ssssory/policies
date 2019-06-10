@@ -2,7 +2,7 @@
 
 <div class="wrap-fluid">
 
-    <div class="container-fluid paper-wrap bevel tlbr">
+    <div class="container-fluid paper-wrap bevel tlbr" style="background: url('assets/img/1B9gE8lVt-s.jpg')">
 
 
 
@@ -75,7 +75,7 @@
 
                         {{--</div>--}}
 
-                        <div class="body-nest" id="basic" style="margin-top: 30px;">
+                        <div class="body-nest" id="basic" style="margin-top: 30px;background: #e7e7e7;">
                             <div class="form_center">
                                 <h2>{{ $house->street }} {{ $house->num_house }}</h2>
                                 <img src="assets/img/mic1map.jpg" alt="">
@@ -83,19 +83,27 @@
                                 <br>
                                 <br>
                                 <div class="row">
-                                    <div class="col-md-6">левая
+                                    <div class="col-md-6">
                                     <h3>Эти аспекты могут быть важны для вас</h3>
                                         <ul class="list-unstyled">
-                                            <li class="text-danger">Пандус</li>
-                                            <li class="text-success">Бассейн</li>
-                                            <li class="text-danger">Садик</li>
+                                            @foreach ($house_property as $house_prop)
+                                                <li class="text-success">{{$house_prop->property_name}}</li>
+                                            @endforeach
+
+                                            {{--<li class="text-success">Бассейн</li>--}}
+                                            {{--<li class="text-danger">Садик</li>--}}
                                         </ul>
                                     </div>
-                                    <div class="col-md-6">правая
+                                    <div class="col-md-6">
                                     <h3>Рекомендуем - Шишкова 12</h3>
                                         <ul class="list-unstyled">
                                             <li class="text-success">Пандус</li>
                                             <li class="text-success">Бассейн</li>
+                                            <li class="text-success">Ушу</li>
+                                            <li class="text-success">Поликлиника</li>
+                                            <li class="text-success">Окулист</li>
+                                            <li class="text-success">Йога</li>
+                                            <li class="text-success">Травмпункт</li>
                                         </ul>
                                     </div>
                                 </div>

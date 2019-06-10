@@ -76,13 +76,13 @@
 
                         {{--</div>--}}
 
-                        <div class="body-nest" id="basic" style="margin-top: 300px;border-radius: 22px;">
+                        <div class="body-nest" id="basic" style="margin-top: 300px;BACKGROUND: cadetblue;border-radius: 22px;">
                             <div class="form_center">
                                 <form role="form" method="get" action="/results">
                                     {{ csrf_field() }}
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Укажите адрес дома</label>
-                                        <input type="text" placeholder="Воронеж Шишкова 125" name="street" id="street" class="form-control">
+                                        <label for="exampleInputEmail1" style="COLOR: #f7eeee;">Укажите адрес дома</label>
+                                        <input type="text" placeholder="Воронеж Шишкова 125" name="street" id="street" class="form-control" style="COLOR: #000!important;">
                                     </div>
                                     <div class="form-group ">
                                         {{--<ul class="list">--}}
@@ -97,7 +97,7 @@
                                                     <ul class="list list-unstyled">
                                                         <li>
                                                             <input tabindex="11" type="radio" id="square-radio-1" name="radio" value="moms">
-                                                            <label for="square-radio-1">Молодая семья</label>
+                                                            <label for="square-radio-1" style="COLOR: #f7eeee;">Молодая семья</label>
                                                         </li>
                                                     </ul>
                                                     <div style="clear:both;"></div>
@@ -108,7 +108,7 @@
                                                     <ul class="list list-unstyled">
                                                         <li>
                                                             <input tabindex="11" type="radio" id="square-radio-2" name="radio" value="disabled">
-                                                            <label for="square-radio-2">Люди с ограниченными возможностями</label>
+                                                            <label for="square-radio-2" style="COLOR: #f7eeee;">Люди с ограниченными возможностями</label>
                                                         </li>
                                                     </ul>
                                                     <div style="clear:both;"></div>
@@ -119,7 +119,7 @@
                                                     <ul class="list list-unstyled">
                                                         <li>
                                                             <input tabindex="11" type="radio" id="square-radio-3" name="radio" value="sport">
-                                                            <label for="square-radio-3">Спортсмены</label>
+                                                            <label for="square-radio-3" style="COLOR: #f7eeee;">Спортсмены</label>
                                                         </li>
                                                     </ul>
                                                     <div style="clear:both;"></div>

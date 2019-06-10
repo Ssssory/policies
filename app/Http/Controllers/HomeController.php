@@ -39,12 +39,16 @@ class HomeController extends Controller
         $currentDistrict = DB::table('house_district')->where('house_id',$house->id)->first()->district_id;
         $reiting = DB::table('rating')->where('house_id',$house->id)->where('category',$currentCategoryId)->first()->result;
         $achivments = DB::table('achievments')->where('district_id',$currentDistrict)->get();
-        
-//        dump($achivments);
+
+        $house_property = DB::table('house_property')
+            ->join('dict_house_property', 'house_property.property_id', '=', 'dict_house_property.id')
+            ->where('house_id',$house->id)->get();
+//        dump($house_property);
         return view('results',[
             'house'       => $house,
             'reiting'     => $reiting,
-            'achivments'  => $achivments
+            'achivments'  => $achivments,
+            'house_property' => $house_property
         ]);
     }
 }
